@@ -2,8 +2,31 @@
 @{
     ViewBag.Title = "Index";
 }
-
+<script src="~/scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    function submit() {
+        $(document).ready(function () {
+            $("#btnSubmit").click(function () {
+                if ($("#txtuname").val() == "") {
+                    alert('Enter User Name');
+                    return false
+                }
+                else {
+                    return true;
+                }
+                if ($("#txtpass").val() == "") {
+                    alert('Enter Password');
+                    return false
+                }
+                else {
+                    return true;
+                }
+            });
+        });
+    }
+</script>
 <h2>Index</h2>
+
 <table>
     <tr>
        <td>Login Here</td>
@@ -13,7 +36,7 @@
             Enter User Name: 
         </td>
         <td>
-            <input type="text" name="txtUname" />
+            <input id="=txtuname" type="text" name="txtUname" />
         </td>
     </tr>
     <tr>
@@ -21,13 +44,14 @@
             Enter Password:
         </td>
         <td>
-            <input type="password" name="txtpass" />
+            <input id="txtpass" type="password" name="txtpass" />
         </td>
     </tr>
     <tr>
         <td>
-            <input type="submit" value="Sumbit" name="submit" />
+            <input type="submit" value="Sumbit" name="submit" id="btnSubmit" />
         </td>
     </tr>
 </table>
+
 
