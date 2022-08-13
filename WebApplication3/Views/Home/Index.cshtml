@@ -3,6 +3,7 @@
     ViewBag.Title = "Index";
 }
 <script src="~/scripts/jquery-1.10.2.min.js"></script>
+<script src="~/scripts/jquery-1.10.2.js"></script>
 <script type="text/javascript">
     function submit() {
         $(document).ready(function () {
@@ -26,32 +27,33 @@
     }
 </script>
 <h2>Index</h2>
-
-<table>
-    <tr>
-       <td>Login Here</td>
-    </tr>
-    <tr>
-        <td>
-            Enter User Name: 
-        </td>
-        <td>
-            <input id="=txtuname" type="text" name="txtUname" />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Enter Password:
-        </td>
-        <td>
-            <input id="txtpass" type="password" name="txtpass" />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <input type="submit" value="Sumbit" name="submit" id="btnSubmit" />
-        </td>
-    </tr>
-</table>
+<form id="form1">
+    <table>
+        <tr>
+            <td>Login Here</td>
+        </tr>
+        <tr>
+            <td>
+                Enter User Name:
+            </td>
+            <td>
+                <input id="=txtuname" type="text" name="txtUname" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Enter Password:
+            </td>
+            <td>
+                <input id="txtpass" type="password" name="txtpass" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Sumbit" name="submit" id="btnSubmit" onclick="submit" />
+            </td>
+        </tr>
+    </table>
+</form>
 
 
